@@ -29,54 +29,42 @@ static const CGFloat kPercentageEndOfRope = 0.05f; // What percentage or rope sh
         for (int i = 0; i < numberOfPoints - 1; i++) {
             CGFloat x = left + ((right - left) / numberOfPoints) * i;
             CGFloat y = 600;
-            
             QQQPoint *point = [[QQQPoint alloc] initWithX:x andY:y];
             [self.points addObject:point];
         }
         
         self.lengthBetweenPoints = [self.points[1] x] - [self.points[0] x];
         
-        
         for (int i = 0; i < numberOfPoints - 1; i++) {
             double x = right;
             double y = 600 - i * self.lengthBetweenPoints;
-            
             QQQPoint *point = [[QQQPoint alloc] init];
             point.x = x;
             point.y = y;
-            
             [self.points addObject:point];
         }
         
         for (int i = 0; i < numberOfPoints - 1; i++) {
             double x = right - i * self.lengthBetweenPoints;
             double y = 600 - numberOfPoints * self.lengthBetweenPoints;
-            
             QQQPoint *point = [[QQQPoint alloc] init];
             point.x = x;
             point.y = y;
-            
             [self.points addObject:point];
         }
         
         for (int i = 0; i < numberOfPoints - 1; i++) {
             double x = left;
             double y = (600 - numberOfPoints * self.lengthBetweenPoints) + i * self.lengthBetweenPoints;
-            
             QQQPoint *point = [[QQQPoint alloc] init];
             point.x = x;
             point.y = y;
-            
             [self.points addObject:point];
         }
         self.usedPoint = [[NSMutableArray alloc] initWithCapacity:self.points.count];
         for (int i = 0; i < self.points.count; i++)
             self.usedPoint[i] = @(NO);
-        
     }
-    
-    
-    
     
     return self;
 }

@@ -47,11 +47,6 @@ static const CGFloat kMaxDistance = 50.0f;
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-//    [self updateRopeInView];
-}
-
 #pragma mark - Actions
 
 - (void)gestureRecognized:(UITapGestureRecognizer *)recognizer {
@@ -101,33 +96,6 @@ static const CGFloat kMaxDistance = 50.0f;
 }
 
 
-- (void)updateRopeInView {
-    
-    if (self.movePointsArray.count == 0) {
-    
-        QQQPoint *point = [[QQQPoint alloc] init];
-        self.currentPosition = arc4random() % self.rope.points.count;
-        point.x = arc4random() % (NSInteger)self.view.bounds.size.width;
-        point.y = arc4random() % (NSInteger)self.view.bounds.size.height;
-        
-        double startX = [self.rope.points[self.currentPosition] x];
-        double startY = [self.rope.points[self.currentPosition] y];
-        
-        NSInteger numberOfSteps = MAX(1, (NSInteger)[point distanceToPoint:self.rope.points[self.currentPosition]] / 10);
-        
-        for (NSInteger i = 1; i <= numberOfSteps; i++) {
-            QQQPoint *newPoint = [[QQQPoint alloc] init];
-            newPoint.x = startX + (point.x - startX) / numberOfSteps * i;
-            newPoint.y = startY + (point.y - startY) / numberOfSteps * i;
-            [self.movePointsArray addObject:newPoint];
-        }
-    }
-    
-    [self smallUpdatedPointWithIndex:self.currentPosition toPoint:self.movePointsArray[0]];
-    [self.movePointsArray removeObjectAtIndex:0];
-    
-}
-
 - (void)smallUpdatedPointWithIndex:(NSInteger)index toPoint:(QQQPoint *)point {
     
     [self.rope movePointAtIndex:index toPoint:point];
@@ -138,10 +106,6 @@ static const CGFloat kMaxDistance = 50.0f;
         
         view.frame = CGRectMake(point.x, point.y, 2 * kRadius, 2 * kRadius);
     }    
-}
-
-- (void)updateFinished {
-    [self updateRopeInView];
 }
 
 @end
