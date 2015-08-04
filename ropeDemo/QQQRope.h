@@ -8,17 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@interface QQQPoint : NSObject
-
-@property (nonatomic, assign) CGFloat x;
-@property (nonatomic, assign) CGFloat y;
-
-
-- (instancetype)initWithX:(CGFloat)x andY:(CGFloat)y;
-- (double)distanceToPoint:(QQQPoint *)point;
-
-@end
+#import "QQQPoint.h"
 
 @interface QQQRope : NSObject
 

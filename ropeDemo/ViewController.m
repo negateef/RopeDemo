@@ -130,22 +130,15 @@ static const CGFloat kDurationKoefficient = 0.003f;
 }
 
 - (void)smallUpdatedPointWithIndex:(NSInteger)index toPoint:(QQQPoint *)point {
-    CGFloat duration = [point distanceToPoint:self.rope.points[index]] * kDurationKoefficient;
     
     [self.rope movePointAtIndex:index toPoint:point];
-    
-//    [UIView animateWithDuration:duration animations:^{
-        for (int i = 0; i < self.rope.points.count; i++) {
-            UIView *view = self.pointsViews[i];
-            QQQPoint *point = self.rope.points[i];
+    for (int i = 0; i < self.rope.points.count; i++) {
+        UIView *view = self.pointsViews[i];
+        QQQPoint *point = self.rope.points[i];
 
-            
-            view.frame = CGRectMake(point.x, point.y, 2 * kRadius, 2 * kRadius);
-        }
-//    } completion:^(BOOL finished) {
-//            [self updateFinished];
-//    }];
-    
+        
+        view.frame = CGRectMake(point.x, point.y, 2 * kRadius, 2 * kRadius);
+    }    
 }
 
 - (void)updateFinished {

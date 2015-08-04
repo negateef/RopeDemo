@@ -12,22 +12,6 @@ static const NSInteger numberOfPoints = 500;
 static const CGFloat kDecrease = 0.9995f;
 static const CGFloat kPercentageEndOfRope = 0.05f;
 
-@implementation QQQPoint
-
-- (instancetype)initWithX:(CGFloat)x andY:(CGFloat)y {
-    if (self = [super init]) {
-        _x = x;
-        _y = y;
-    }
-    return self;
-}
-
-- (CGFloat)distanceToPoint:(QQQPoint *)point {
-    return sqrt((point.x - self.x) * (point.x - self.x) + (point.y - self.y) * (point.y - self.y));
-}
-
-@end
-
 @interface QQQRope ()
 
 @property (nonatomic, assign) CGFloat lengthBetweenPoints;

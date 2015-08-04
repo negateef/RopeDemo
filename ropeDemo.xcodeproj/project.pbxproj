@@ -15,6 +15,7 @@
 		46027EA61B69247B00CA8BFD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46027EA41B69247B00CA8BFD /* LaunchScreen.xib */; };
 		46027EB21B69247B00CA8BFD /* ropeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46027EB11B69247B00CA8BFD /* ropeDemoTests.m */; };
 		46027EBD1B6924B300CA8BFD /* QQQRope.m in Sources */ = {isa = PBXBuildFile; fileRef = 46027EBC1B6924B300CA8BFD /* QQQRope.m */; };
+		469565D81B70C07F00B22D6A /* QQQPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 469565D71B70C07F00B22D6A /* QQQPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		46027EB11B69247B00CA8BFD /* ropeDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ropeDemoTests.m; sourceTree = "<group>"; };
 		46027EBB1B6924B300CA8BFD /* QQQRope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQQRope.h; sourceTree = "<group>"; };
 		46027EBC1B6924B300CA8BFD /* QQQRope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQQRope.m; sourceTree = "<group>"; };
+		469565D61B70C07F00B22D6A /* QQQPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQQPoint.h; sourceTree = "<group>"; };
+		469565D71B70C07F00B22D6A /* QQQPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQQPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				46027E9D1B69247B00CA8BFD /* ViewController.m */,
 				46027EBB1B6924B300CA8BFD /* QQQRope.h */,
 				46027EBC1B6924B300CA8BFD /* QQQRope.m */,
+				469565D61B70C07F00B22D6A /* QQQPoint.h */,
+				469565D71B70C07F00B22D6A /* QQQPoint.m */,
 				46027EA21B69247B00CA8BFD /* Images.xcassets */,
 				46027EA41B69247B00CA8BFD /* LaunchScreen.xib */,
 				46027E951B69247B00CA8BFD /* Supporting Files */,
@@ -226,6 +231,7 @@
 			files = (
 				46027E9E1B69247B00CA8BFD /* ViewController.m in Sources */,
 				46027E9B1B69247B00CA8BFD /* AppDelegate.m in Sources */,
+				469565D81B70C07F00B22D6A /* QQQPoint.m in Sources */,
 				46027E981B69247B00CA8BFD /* main.m in Sources */,
 				46027EBD1B6924B300CA8BFD /* QQQRope.m in Sources */,
 			);
@@ -422,6 +428,7 @@
 				46027EB71B69247B00CA8BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46027EB81B69247B00CA8BFD /* Build configuration list for PBXNativeTarget "ropeDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				46027EBA1B69247B00CA8BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
