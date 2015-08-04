@@ -16,6 +16,10 @@
 
 
 - (instancetype)initWithX:(CGFloat)x andY:(CGFloat)y;
+
+/**
+ *  Returns Euclidian distance between two points
+ */
 - (double)distanceToPoint:(QQQPoint *)point;
 
 @end

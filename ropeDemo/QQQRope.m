@@ -8,9 +8,10 @@
 
 #import "QQQRope.h"
 
-static const NSInteger numberOfPoints = 500;
-static const CGFloat kDecrease = 0.9995f;
-static const CGFloat kPercentageEndOfRope = 0.05f;
+
+static const NSInteger numberOfPoints = 300; // Temporary contant: number of points in rope ~ numerOfPoints
+static const CGFloat kDecrease = 0.9995f; // Coefficient of friction decrease
+static const CGFloat kPercentageEndOfRope = 0.05f; // What percentage or rope should be taken as end of rope
 
 @interface QQQRope ()
 
@@ -20,8 +21,6 @@ static const CGFloat kPercentageEndOfRope = 0.05f;
 @end
 
 @implementation QQQRope
-
-#define EPS 1e-1
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -101,9 +100,6 @@ static const CGFloat kPercentageEndOfRope = 0.05f;
         return;
     
     self.usedPoint[index] = @(YES);
-    
-    if ([newPoint distanceToPoint:self.points[index]] < EPS)
-        return;
     
     QQQPoint *oldPoint = self.points[index];
     

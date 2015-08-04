@@ -11,7 +11,6 @@
 
 static const CGFloat kRadius = 2.0f;
 static const CGFloat kMaxDistance = 50.0f;
-static const CGFloat kDurationKoefficient = 0.003f;
 
 @interface ViewController ()
 
